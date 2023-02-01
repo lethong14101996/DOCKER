@@ -1,0 +1,7 @@
+/Users/StevenLee/Desktop/DE_K4/docker swarm/dotnet/bin/Debug/net7.0/publish/dotnet
+/Users/StevenLee/Desktop/DE_K4/docker swarm/dotnet/bin/Debug/net7.0/publish/appsettings.Development.json
+/Users/StevenLee/Desktop/DE_K4/docker swarm/dotnet/bin/Debug/net7.0/publish/appsettings.json
+/Users/StevenLee/Desktop/DE_K4/docker swarm/dotnet/bin/Debug/net7.0/publish/dotnet.dll
+/Users/StevenLee/Desktop/DE_K4/docker swarm/dotnet/bin/Debug/net7.0/publish/dotnet.deps.json
+/Users/StevenLee/Desktop/DE_K4/docker swarm/dotnet/bin/Debug/net7.0/publish/dotnet.runtimeconfig.json
+/Users/StevenLee/Desktop/DE_K4/docker swarm/dotnet/bin/Debug/net7.0/publish/dotnet.pdb
