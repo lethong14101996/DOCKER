@@ -1,0 +1,52 @@
+version: "3"
+
+networks:
+   my-network:
+      driver: bridge
+volumes:
+   dir-site:
+      driver_opts:
+         device: /Users/StevenLee/Desktop/DATA
+         type: none
+         o: bind
+services:
+   my-php:
+      container_name: c-php
+      build:
+         dockerfile: Dockerfile
+         context: ./php
+      hostname: php
+      restart: always
+      networks:
+         - my-network
+      volumes:
+         - dir-site:/data/
+   my-httpd:
+      container_name: c-httpd
+      image: "httpd:latest"
+      hostname: httpd
+      restart: always
+      networks:
+         - my-network
+      volumes:
+         - dir-site:/data/
+         - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
+      ports:
+         - "9999:80"
+         - "443:443"
+   my-mysql:
+      container_name: c-mysql
+      image: "mysql:latest"
+      hostname: mysql
+      restart: always
+      networks:
+         - my-network
+      volumes:
+         - ./db-mysql:/var/lib/mysql
+         - ./my.cnf:/etc/my.cnf
+      environment:
+         - MYSQL_ROOT_PASSWORD=12345
+         - MYSQL_DATABASE=db_site
+         - MYSQL_USER=siteuser
+         - MYSQL_PASSWORD=12345
+
